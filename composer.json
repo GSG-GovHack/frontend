@@ -1,0 +1,10 @@
+{
+    "name": "govhack/instaplace",
+    "authors": [
+        {
+            "name": "Matt Beamish",
+            "email": "matt.beamish@gsg.wa.edu.au"
+        }
+    ],
+    "require": {}
+}
