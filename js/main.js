@@ -19,7 +19,7 @@ $(document).ready(function() {
             likes = Math.floor(Math.random()*20);
 
             var marker = L.marker([poi.lat, poi.lon]).addTo(mymap);
-            marker.bindPopup("<b><i class='fas fa-building'></i> " + poi.name + "</b><br /><i>1 recommendation found</i><br /><ul><li><u>" + first + " " + surname + ".</u> (<i class='fas fa-thumbs-up'></i> " + likes + " people found this helpful)</li></ul>");
+            marker.bindPopup("<b><i class='fas fa-building'></i> " + poi.name + "</b><br /><i>1 local recommendation found</i><br /><ul><li><u>" + first + " " + surname + ".</u> (<i class='fas fa-thumbs-up'></i> " + likes + " people found this helpful)</li></ul>");
         }
     });
 
