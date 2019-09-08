@@ -18,11 +18,14 @@ $(document).ready(function() {
             "time": "2019-09-08 10:03:10"
         }]
     };
-    
-    for (j in json.records) {
-        poi = json.records[j];
 
-        var marker = L.marker([poi.lat, poi.lon]).addTo(mymap);
-    }
+    $.getJSON("/api/api/poi/get_all",function(json) {
+        for (j in json) {
+            poi = json[j];
+
+            var marker = L.marker([poi.lat, poi.lon]).addTo(mymap);
+            marker.bindPopup("<b><i class='fa fas-building'></i> " + poi.name + "</b><br /><i>1 recommendation found</i><br /><ul><li><u>Owen B</u> (<i class='fa fas-thumbs-up'></i> 3 people found this helpful)</li></ul>");
+        }
+    });
 
 });

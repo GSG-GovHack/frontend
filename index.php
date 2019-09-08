@@ -24,11 +24,10 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#"><img src="/images/icon.png" /> Instaplace</a>
     </nav>
-</nav>
     <div class="row"><div class="col" id="mapid"></div></div>
-    <div class="row">
-
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
+    </nav>
   </div>
 
   <script src="/node_modules/jquery/dist/jquery.min.js"></script>
