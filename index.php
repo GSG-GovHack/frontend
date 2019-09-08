@@ -25,8 +25,21 @@
       <a class="navbar-brand" href="#"><img src="/images/icon.png" /> Instaplace</a>
     </nav>
     <div class="row"><div class="col" id="mapid"></div></div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <button class='btn btn-outline-success'>Map</button>
+      </li>
+      <li class="nav-item active">
+        <button class='btn btn-outline-success'>Profile</button>
+      </li>
+      <li class="nav-item active">
+        <button class='btn btn-outline-success'><i class='fas fa-video'></i> Places</button>
+      </li>
+      <li class="nav-item active">
+        <button class='btn btn-outline-success'>Info</button>
+      </li>
+    </ul>
     </nav>
   </div>
 

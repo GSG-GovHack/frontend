@@ -7,24 +7,19 @@ $(document).ready(function() {
         accessToken: 'pk.eyJ1IjoiZ3NncmFtbWFyIiwiYSI6ImNrMGFuOWZxdzBsYnYzbG1vNXNmY3M0cHoifQ.X7S1kk9MpszP0givbMrmwQ'
     }).addTo(mymap);
 
-    json = {
-        "recordsFound": 1,
-        "records": [{
-            "id": 2,
-            "type": "BUISS",
-            "name": "Albany Public Library",
-            "lat": -35.0230447,
-            "lon": 117.8810094,
-            "time": "2019-09-08 10:03:10"
-        }]
-    };
+    names = ["Owen","James","Kelvin","Elinor","Kieran","Matt","Philip","Edward"];
+    surnames = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
     $.getJSON("/api/api/poi/get_all",function(json) {
         for (j in json) {
             poi = json[j];
 
+            first = names[Math.floor(Math.random()*names.length)];
+            surname = surnames[Math.floor(Math.random()*surnames.length)];
+            likes = Math.floor(Math.random()*20);
+
             var marker = L.marker([poi.lat, poi.lon]).addTo(mymap);
-            marker.bindPopup("<b><i class='fa fas-building'></i> " + poi.name + "</b><br /><i>1 recommendation found</i><br /><ul><li><u>Owen B</u> (<i class='fa fas-thumbs-up'></i> 3 people found this helpful)</li></ul>");
+            marker.bindPopup("<b><i class='fas fa-building'></i> " + poi.name + "</b><br /><i>1 recommendation found</i><br /><ul><li><u>" + first + " " + surname + ".</u> (<i class='fas fa-thumbs-up'></i> " + likes + " people found this helpful)</li></ul>");
         }
     });
 
