@@ -7,10 +7,22 @@ $(document).ready(function() {
         accessToken: 'pk.eyJ1IjoiZ3NncmFtbWFyIiwiYSI6ImNrMGFuOWZxdzBsYnYzbG1vNXNmY3M0cHoifQ.X7S1kk9MpszP0givbMrmwQ'
     }).addTo(mymap);
 
-    url = "/api/api/poi/get_all";
-    $.getJSON(url,function(xhr) {
-        console.log(typeof xhr);
-    }) ;
+    json = {
+        "recordsFound": 1,
+        "records": [{
+            "id": 2,
+            "type": "BUISS",
+            "name": "Albany Public Library",
+            "lat": -35.0230447,
+            "lon": 117.8810094,
+            "time": "2019-09-08 10:03:10"
+        }]
+    };
     
+    for (j in json.records) {
+        poi = json.records[j];
+
+        var marker = L.marker([poi.lat, poi.lon]).addTo(mymap);
+    }
 
 });
